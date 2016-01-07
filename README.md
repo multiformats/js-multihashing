@@ -57,6 +57,13 @@ multihashing.digest(buf, 'sha1')
 var h = multihashing.createHash('sha1')
 h.update(buf)
 h.digest()
+
+// You can use `.verify()` to verify that a given multihash and a given blob match, as when receiving a blob from the network.
+var buf = new Buffer('beep boop')
+var otherbuf = new Buffer('oops')
+var hash = multihashing(buf, 'sha1')
+verify(hash, buf)       # true
+verify(hash, otherbuf)  # false
 ```
 
 ## Examples

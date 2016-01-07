@@ -33,6 +33,12 @@ mh.createHash = function (func, length) {
   return mh.functions[func]()
 }
 
+mh.verify = function(multihash_input, buf) {
+    decoded = multihash.decode(multihash_input)
+    re_encoded = mh(buf, decoded.name, decoded.length)
+    return re_encoded.equals(multihash_input)
+}
+
 mh.functions = {
   0x11: gsha1,
   0x12: gsha2_256,
