@@ -34,3 +34,24 @@ test('sha2-512', function (t) {
 
   t.end()
 })
+
+test('verify-true', function (t) {
+    var buf = new Buffer('beep boop')
+
+    var mh = multihashing(buf, 'sha1')
+    t.true(multihashing.verify(mh, buf),
+           "verify() succeeds when the multihash matches the buffer")
+
+    t.end()
+})
+
+test('verify-false', function (t) {
+    var buf = new Buffer('beep boop')
+    var otherbuf = new Buffer('oops')
+
+    var mh = multihashing(buf, 'sha1')
+    t.false(multihashing.verify(mh, otherbuf),
+            "verify() fails when the multihash doesn't match the buffer")
+
+    t.end()
+})
