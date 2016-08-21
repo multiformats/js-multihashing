@@ -1,7 +1,7 @@
 'use strict'
-
+const isNode = require('detect-node')
 const multihash = require('multihashes')
-const crypto = require('webcrypto')
+const createHash = (isNode ? require('crypto').createHash : require('sha.js'))
 
 const mh = module.exports = Multihashing
 
@@ -43,13 +43,13 @@ mh.functions = {
 }
 
 function gsha1 () {
-  return crypto.createHash('sha1')
+  return createHash('sha1')
 }
 
 function gsha2_256 () {
-  return crypto.createHash('sha256')
+  return createHash('sha256')
 }
 
 function gsha2_512 () {
-  return crypto.createHash('sha512')
+  return createHash('sha512')
 }

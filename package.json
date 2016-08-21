@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "multihashes": "^0.2.0",
-    "webcrypto": "^0.1.0"
+    "sha.js": "^2.4.5",
+    "detect-node": "^2.0.3"
   },
   "devDependencies": {
     "aegir": "^2.1.1",
