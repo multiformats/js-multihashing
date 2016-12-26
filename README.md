@@ -2,13 +2,13 @@ js-multihashing
 ===============
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
-[![](https://img.shields.io/badge/project-multiformats-blue.svg?style=flat-square)](http://github.com/multiformats/multiformats)
-[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
-[![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
+[![](https://img.shields.io/badge/project-multiformats-blue.svg?style=flat-square)](https://github.com/multiformats/multiformats)
+[![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](https://webchat.freenode.net/?channels=%23ipfs)
 [![Coverage Status](https://coveralls.io/repos/github/jbenet/js-multihashing/badge.svg?branch=master)](https://coveralls.io/github/jbenet/js-multihashing?branch=master)
-[![Travis CI](https://travis-ci.org/jbenet/js-multihashing.svg?branch=master)](https://travis-ci.org/jbenet/js-multihashing)
-[![Circle CI](https://circleci.com/gh/jbenet/js-multihashing.svg?style=svg)](https://circleci.com/gh/jbenet/js-multihashing)
-[![Dependency Status](https://david-dm.org/jbenet/js-multihashing.svg?style=flat-square)](https://david-dm.org/jbenet/js-multihashing) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![Travis CI](https://img.shields.io/travis/multiformats/js-multihashing.svg?style=flat-square&branch=master)](https://travis-ci.org/multiformats/js-multihashing)
+[![Circle CI](https://circleci.com/gh/multiformats/js-multihashing.svg?style=svg)](https://circleci.com/gh/jbenet/js-multihashing)
+[![Dependency Status](https://david-dm.org/multiformats/js-multihashing.svg?style=flat-square)](https://david-dm.org/jbenet/js-multihashing) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > Use all the functions in [multihash](https://github.com/multiformats/multihash).
 
@@ -148,8 +148,8 @@ Contributions welcome. Please check out [the issues](https://github.com/multifor
 
 Check out our [contributing document](https://github.com/multiformats/multiformats/blob/master/contributing.md) for more information on how we work, and about contributing in general. Please be aware that all interactions related to multiformats are subject to the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 
-Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
-[MIT](LICENSE) © Protocol Labs Inc.
+[MIT](LICENSE) © 2016 Protocol Labs Inc.
