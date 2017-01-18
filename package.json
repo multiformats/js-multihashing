@@ -33,11 +33,11 @@
     "url": "https://github.com/jbenet/js-multihashing/issues"
   },
   "dependencies": {
-    "multihashes": "^0.2.0",
+    "multihashes": "^0.3.1",
     "webcrypto": "^0.1.0"
   },
   "devDependencies": {
-    "aegir": "^2.1.1",
+    "aegir": "^9.3.0",
     "chai": "^3.5.0",
     "pre-commit": "^1.1.2"
   },
