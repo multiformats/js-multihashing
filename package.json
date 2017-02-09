@@ -5,13 +5,13 @@
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "test": "aegir-test",
-    "test:browser": "aegir-test browser",
+    "test": "aegir-test --webworker=false",
+    "test:browser": "aegir-test browser --webworker=false",
     "test:node": "aegir-test node",
     "lint": "aegir-lint",
-    "release": "aegir-release",
-    "release-minor": "aegir-release minor",
-    "release-major": "aegir-release major",
+    "release": "aegir-release --webworker=false",
+    "release-minor": "aegir-release minor --webworker=false",
+    "release-major": "aegir-release major --webworker=false",
     "build": "aegir-build",
     "coverage": "aegir-coverage",
     "coverage-publish": "aegir-coverage publish"
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jbenet/js-multihashing.git"
+    "url": "git://github.com/multiformats/js-multihashing.git"
   },
   "keywords": [
     "multihash"
@@ -30,18 +30,18 @@
   "author": "Juan Benet <juan@benet.ai> (http://juan.benet.ai/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jbenet/js-multihashing/issues"
+    "url": "https://github.com/multiformats/js-multihashing/issues"
   },
   "dependencies": {
-    "multihashes": "^0.2.0",
-    "webcrypto": "^0.1.0"
+    "multihashes": "~0.3.3",
+    "webcrypto": "~0.1.0"
   },
   "devDependencies": {
-    "aegir": "^2.1.1",
+    "aegir": "^10.0.0",
     "chai": "^3.5.0",
-    "pre-commit": "^1.1.2"
+    "pre-commit": "^1.2.2"
   },
-  "homepage": "https://github.com/jbenet/js-multihashing",
+  "homepage": "https://github.com/multiformats/js-multihashing",
   "contributors": [
     "David Dias <daviddias.p@gmail.com>",
     "David Dias <mail@daviddias.me>",

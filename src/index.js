@@ -35,8 +35,8 @@ mh.createHash = function (func, length) {
 
 mh.functions = {
   0x11: gsha1,
-  0x12: gsha2_256,
-  0x13: gsha2_512
+  0x12: gsha2256,
+  0x13: gsha2512
   // 0x14: gsha3 // not implemented yet
   // 0x40: blake2b, // not implemented yet
   // 0x41: blake2s, // not implemented yet
@@ -46,10 +46,10 @@ function gsha1 () {
   return crypto.createHash('sha1')
 }
 
-function gsha2_256 () {
+function gsha2256 () {
   return crypto.createHash('sha256')
 }
 
-function gsha2_512 () {
+function gsha2512 () {
   return crypto.createHash('sha512')
 }
