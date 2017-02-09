@@ -45,7 +45,10 @@
   "contributors": [
     "David Dias <daviddias.p@gmail.com>",
     "David Dias <mail@daviddias.me>",
+    "Harlan T Wood <harlantwood@users.noreply.github.com>",
     "Juan Batiz-Benet <juan@benet.ai>",
-    "dignifiedquire <dignifiedquire@gmail.com>"
+    "Richard Littauer <richard.littauer@gmail.com>",
+    "dignifiedquire <dignifiedquire@gmail.com>",
+    "npm-to-cdn-bot (by Forbes Lindesay) <npmcdn-to-unpkg-bot@users.noreply.github.com>"
   ]
 }
