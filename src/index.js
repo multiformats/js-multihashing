@@ -2,6 +2,7 @@
 
 const multihash = require('multihashes')
 const crypto = require('webcrypto')
+const blake = require('./blake')
 
 const mh = module.exports = Multihashing
 
@@ -38,9 +39,9 @@ mh.functions = {
   0x12: gsha2256,
   0x13: gsha2512
   // 0x14: gsha3 // not implemented yet
-  // 0x40: blake2b, // not implemented yet
-  // 0x41: blake2s, // not implemented yet
 }
+
+blake.addFuncs(mh.functions)
 
 function gsha1 () {
   return crypto.createHash('sha1')

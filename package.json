@@ -1,6 +1,6 @@
 {
   "name": "multihashing",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "multiple hash functions",
   "main": "src/index.js",
   "scripts": {
@@ -32,7 +32,8 @@
     "url": "https://github.com/multiformats/js-multihashing/issues"
   },
   "dependencies": {
-    "multihashes": "~0.3.3",
+    "blakejs": "^1.0.1",
+    "multihashes": "^0.4.0",
     "webcrypto": "~0.1.0"
   },
   "devDependencies": {

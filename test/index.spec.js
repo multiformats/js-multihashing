@@ -35,6 +35,36 @@ describe('multihashing', () => {
     )
   })
 
+  it('blake2b', () => {
+    const buf = new Buffer('beep boop')
+
+    expect(
+      multihashing(buf, 'blake2b-512')
+    ).to.be.eql(
+      new Buffer('c0e402400eac6255ba822373a0948122b8d295008419a8ab27842ee0d70eca39855621463c03ec75ac3610aacfdff89fa989d8d61fc00450148f289eb5b12ad1a954f659', 'hex')
+    )
+    expect(
+      multihashing(buf, 'blake2b-160')
+    ).to.be.eql(
+      new Buffer('94e40214fe303247293e54e0a7ea48f9408ca68b36b08442', 'hex')
+    )
+  })
+
+  it('blake2s', () => {
+    const buf = new Buffer('beep boop')
+
+    expect(
+      multihashing(buf, 'blake2s-256')
+    ).to.be.eql(
+      new Buffer('e0e402204542eaca484e4311def8af74b546edd7fceb49eeb3cdcfd8a4a72ed0dc81d4c0', 'hex')
+    )
+    expect(
+      multihashing(buf, 'blake2s-40')
+    ).to.be.eql(
+      new Buffer('c5e402059ada01bb57', 'hex')
+    )
+  })
+
   it('cuts the length', () => {
     const buf = new Buffer('beep boop')
 
@@ -47,9 +77,9 @@ describe('multihashing', () => {
 
   it('throws on non implemented func', () => {
     expect(
-      () => multihashing(new Buffer('beep boop'), 'blake2b')
+      () => multihashing(new Buffer('beep boop'), 'sha3')
     ).to.throw(
-      /not yet supported/
+      /Unrecognized hash function named:/
     )
   })
 })
