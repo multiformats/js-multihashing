@@ -65,9 +65,9 @@ var multihashing = require('multihashing')
 Loading this module through a script tag will make the `multihashing` obj available in the global namespace.
 
 ```html
-<script src="https://unpkg.com/multihashing/dist/index.min.js"></script>
+<script src="/multihashing@0.2.1/dist/index.min.js"></script>
 <!-- OR -->
-<script src="https://unpkg.com/multihashing/dist/index.js"></script>
+<script src="/multihashing@0.2.1/dist/index.js"></script>
 ```
 
 #### Gotchas
