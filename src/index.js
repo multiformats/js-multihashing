@@ -1,8 +1,8 @@
 'use strict'
 
 const multihash = require('multihashes')
-const crypto = require('webcrypto')
 const blake = require('./blake')
+const crypto = require('webcrypto')
 
 const mh = module.exports = Multihashing
 

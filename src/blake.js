@@ -33,7 +33,7 @@ class B2Hash {
   digest () {
     const ctx = this.ctx
     this.ctx = null
-    return new Buffer(this.hf.digest(ctx))
+    return Buffer.from(this.hf.digest(ctx))
   }
 }
 
