@@ -34,7 +34,7 @@
   "dependencies": {
     "blakejs": "^1.0.1",
     "multihashes": "~0.4.4",
-    "webcrypto": "~0.1.0"
+    "webcrypto": "~0.1.1"
   },
   "devDependencies": {
     "aegir": "^12.2.0",
