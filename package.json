@@ -4,16 +4,16 @@
   "description": "multiple hash functions",
   "main": "src/index.js",
   "scripts": {
-    "test": "aegir-test --webworker=false",
-    "test:browser": "aegir-test browser --webworker=false",
-    "test:node": "aegir-test node",
-    "lint": "aegir-lint",
-    "release": "aegir-release --webworker=false --dom",
-    "release-minor": "aegir-release minor --webworker=false",
-    "release-major": "aegir-release major --webworker=false",
-    "build": "aegir-build",
-    "coverage": "aegir-coverage",
-    "coverage-publish": "aegir-coverage publish"
+    "lint": "aegir lint",
+    "build": "aegir build",
+    "test": "aegir test -t node -t browser -t webworker",
+    "test:node": "aegir test -t node",
+    "test:browser": "aegir test -t browser",
+    "release": "aegir release -t node -t browser",
+    "release-minor": "aegir release --type minor -t node -t browser",
+    "release-major": "aegir release --type major -t node -t browser",
+    "coverage": "aegir coverage",
+    "coverage-publish": "aegir coverage --provider coveralls"
   },
   "pre-commit": [
     "lint",
@@ -37,7 +37,7 @@
     "webcrypto": "~0.1.0"
   },
   "devDependencies": {
-    "aegir": "^11.0.0",
+    "aegir": "^12.2.0",
     "chai": "^3.5.0",
     "pre-commit": "^1.2.2"
   },
