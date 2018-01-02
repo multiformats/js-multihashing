@@ -8,7 +8,7 @@ const expect = chai.expect
 const multihashing = require('../src')
 
 const tests = {
-  'sha1': [
+  sha1: [
     ['beep boop', '11147c8357577f51d4f0a8d393aa1aaafb28863d9421']
   ],
   'sha2-256': [
