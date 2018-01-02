@@ -28,7 +28,7 @@ class Hasher {
 
   digest () {
     const input = this.input
-    return Buffer.from(this.hf(input))
+    return Buffer.from(this.hf(input), 'hex')
   }
 }
 
