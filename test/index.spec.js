@@ -8,7 +8,7 @@ const expect = chai.expect
 const multihashing = require('../src')
 
 const tests = {
-  'sha1': [
+  sha1: [
     ['beep boop', '11147c8357577f51d4f0a8d393aa1aaafb28863d9421']
   ],
   'sha2-256': [
@@ -29,6 +29,36 @@ const tests = {
   'blake2s-40': [
     ['beep boop', 'c5e402059ada01bb57']
   ],
+  'sha3-512': [
+    ['beep bop', '144038122bf54c0e1eeff013e9b8c735af7c08ff8a7bb2b55b5abe9d97f9653e19f388cd9719ffb4ab8ccb9330a1fd27929b0a9ee6d7b8b9884c6f787f11088219bc']
+  ],
+  'sha3-384': [
+    ['beep bop', '15302f0456d702d4cafa23c091f8da2dc878b1536fd592c47c2d239f5de67f0a306f36e0197dbbf1c5409292aa92e326b16e']
+  ],
+  'sha3-256': [
+    ['beep bop', '16204de761fac0b163270f59056e1c5d1038348fcb960c03610bde24565473600dfe']
+  ],
+  'sha3-224': [
+    ['beep bop', '171cda7cce25c2f6248dc88a2fdfca56bb97bf39b100089cacfdf68b7b50']
+  ],
+  'shake-128': [
+    ['beep boop', '18205fe422311f770743c2e0d86bcca092111cbce85487212829739c3c3723776e5a']
+  ],
+  'shake-256': [
+    ['beep boop', '194059feb5565e4f924baef74708649fed376d63948a862322ed763ecf093b63b38b0955908c099c63dda73ee469c31b1456cec95e325bd868d0ce0c0135f5a54411']
+  ],
+  'keccak-224': [
+    ['beep bop', '1a1c45f2663794752c0a2292985b476a6aec407cfd78ad6f14f56d7060d9']
+  ],
+  'keccak-256': [
+    ['beep bop', '1b209e7c2fee63c4065cbaa989bd2655a288f877aa788484fb0640d125417796b5e9']
+  ],
+  'keccak-384': [
+    ['beep bop', '1c305a1da4b6e329884e88b66d82961d6518d9cec66eae6ff6900344a30a742a044b6eb584ab6e8a1c609e04f2f235f5cab3']
+  ],
+  'keccak-512': [
+    ['beep bop', '1d403c22f68c98a6c8ea9fa7819721fba90f905d3c29390d4a94fefc4f8348ed04829a7521b44af4aeea707b32fe63e28322666ae26a59feb3493fafa11873383f6c']
+  ]
 }
 
 describe('multihashing', () => {
