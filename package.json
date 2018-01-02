@@ -33,14 +33,15 @@
     "url": "https://github.com/multiformats/js-multihashing/issues"
   },
   "dependencies": {
-    "blakejs": "^1.0.1",
-    "multihashes": "~0.4.4",
+    "blakejs": "^1.1.0",
+    "js-sha3": "^0.7.0",
+    "multihashes": "~0.4.12",
     "webcrypto": "~0.1.1"
   },
   "devDependencies": {
-    "aegir": "^12.2.0",
-    "chai": "^3.5.0",
-    "dirty-chai": "^1.2.2",
+    "aegir": "^12.3.0",
+    "chai": "^4.1.2",
+    "dirty-chai": "^2.0.1",
     "pre-commit": "^1.2.2"
   },
   "homepage": "https://github.com/multiformats/js-multihashing",
@@ -51,6 +52,7 @@
     "Harlan T Wood <harlantwood@users.noreply.github.com>",
     "Juan Benet <juan@benet.ai>",
     "Richard Littauer <richard.littauer@gmail.com>",
+    "Henrique Dias <hacdias@gmail.com>",
     "npm-to-cdn-bot (by Forbes Lindesay) <npmcdn-to-unpkg-bot@users.noreply.github.com>"
   ]
 }
