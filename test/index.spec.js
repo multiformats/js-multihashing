@@ -42,10 +42,10 @@ const tests = {
     ['beep bop', '171cda7cce25c2f6248dc88a2fdfca56bb97bf39b100089cacfdf68b7b50']
   ],
   'shake-128': [
-    ['beep bop', '1800']
+    ['beep boop', '18205fe422311f770743c2e0d86bcca092111cbce85487212829739c3c3723776e5a']
   ],
   'shake-256': [
-    ['beep bop', '1900']
+    ['beep boop', '194059feb5565e4f924baef74708649fed376d63948a862322ed763ecf093b63b38b0955908c099c63dda73ee469c31b1456cec95e325bd868d0ce0c0135f5a54411']
   ],
   'keccak-224': [
     ['beep bop', '1a1c45f2663794752c0a2292985b476a6aec407cfd78ad6f14f56d7060d9']
