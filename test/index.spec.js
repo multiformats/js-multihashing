@@ -28,7 +28,7 @@ const tests = {
   ],
   'blake2s-40': [
     ['beep boop', 'c5e402059ada01bb57']
-  ],
+  ]
 }
 
 describe('multihashing', () => {
