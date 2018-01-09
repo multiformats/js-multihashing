@@ -31,11 +31,12 @@ For now, it just uses `crypto`, but will use `sha3` and `blake2`, etc.
 - [Examples](#examples)
   - [Multihash output](#multihash-output)
   - [Raw digest output](#raw-digest-output)
+  - [Verify a multihash](#verify-a-multihash)
 - [API](#api)
   - [`multihashing(buf, func, length)`](#multihashingbuf-func-length)
   - [`digest(buf, func, length)`](#digestbuf-func-length)
   - [`createHash(func, length)`](#createhashfunc-length)
-  - [`verify(input, buf)`]
+  - [`verify(input, buf)`](#verifyhash-buf)
   - [`functions`](#functions)
 - [Maintainers](#maintainers)
 - [Contribute](#contribute)
