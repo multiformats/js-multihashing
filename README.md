@@ -31,10 +31,12 @@ For now, it just uses `crypto`, but will use `sha3` and `blake2`, etc.
 - [Examples](#examples)
   - [Multihash output](#multihash-output)
   - [Raw digest output](#raw-digest-output)
+  - [Verify a multihash](#verify-a-multihash)
 - [API](#api)
   - [`multihashing(buf, func, length)`](#multihashingbuf-func-length)
   - [`digest(buf, func, length)`](#digestbuf-func-length)
   - [`createHash(func, length)`](#createhashfunc-length)
+  - [`verify(input, buf)`](#verifyhash-buf)
   - [`functions`](#functions)
 - [Maintainers](#maintainers)
 - [Contribute](#contribute)
@@ -126,6 +128,20 @@ h.digest()
 // => <SlowBuffer 14 f3 01 f3 1b e2 43 f3 4c 56 68 93 78 83 77 1f a3 81 00 2f 1a aa 5f 31 b3 f7 8e 50 0b 66 ff 2f 4f 8e a5 e3 c9 f5 a6 1b d0 73 e2 45 2c 48 04 84 b0 2e 03 ...>
 ```
 
+### Verify a multihash
+
+```js
+> const right = new Buffer('beep boop')
+> const wrong = new Buffer('oops')
+> const hash = multihashing(right, 'sha1')
+
+> console.log(multihashing.verify(hash, right))
+// => true
+
+> console.log(multihashing.verify(hash, wrong))
+// => false
+```
+
 ## API
 
 ### `multihashing(buf, func, length)`
@@ -133,6 +149,8 @@ h.digest()
 ### `digest(buf, func, length)`
 
 ### `createHash(func, length)`
+
+### `verify(hash, buf)`
 
 ### `functions`
 

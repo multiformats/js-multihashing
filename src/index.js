@@ -35,6 +35,12 @@ mh.createHash = function (func, length) {
   return mh.functions[func]()
 }
 
+mh.verify = function (hash, buf) {
+  const decoded = multihash.decode(hash)
+  const encoded = mh(buf, decoded.name, decoded.length)
+  return encoded.equals(hash)
+}
+
 mh.functions = {
   0x11: gsha1,
   0x12: gsha2256,

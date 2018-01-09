@@ -68,6 +68,7 @@ describe('multihashing', () => {
         const input = Buffer.from(test[0])
         const output = Buffer.from(test[1], 'hex')
         expect(multihashing(input, algo)).to.be.eql(output)
+        expect(multihashing.verify(output, input)).to.be.eql(true)
       }
     })
   }
