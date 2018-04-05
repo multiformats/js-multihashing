@@ -1,8 +1,6 @@
 // @flow
-"use strict"
-
 import * as blake from "blakejs"
-import type { Hash, HashTable, HashBuilder } from "./types"
+import type { Hash, HashUpdate, HashTable, HashBuilder } from "./types"
 import type { Code } from "multihashes/lib/constants"
 
 const minB: Code = 0xb201
@@ -28,8 +26,6 @@ const blake2b: BlakeHasher = {
   digest: blake.blake2bFinal
 }
 
-blake2b.init(1, 1)
-
 const blake2s: BlakeHasher = {
   init: blake.blake2sInit,
   update: blake.blake2sUpdate,
@@ -43,6 +39,10 @@ class B2Hash implements Hash {
   constructor(size, hashFunc) {
     this.hf = hashFunc
     this.ctx = this.hf.init(size, null)
+  }
+
+  static new(size, hashFunc): HashUpdate {
+    return new B2Hash(size, hashFunc)
   }
 
   update(buf: Buffer): Hash {
@@ -65,7 +65,7 @@ class B2Hash implements Hash {
 
 export const addFuncs = (table: HashTable) => {
   const mkFunc = (size: number, hashFunc: BlakeHasher): HashBuilder => {
-    return (): Hash => new B2Hash(size, hashFunc)
+    return (): HashUpdate => B2Hash.new(size, hashFunc)
   }
 
   // I don't like using any here but the only way I could get the types to work here.

@@ -9,7 +9,8 @@ import * as blake from "./blake"
 import * as sha3 from "./sha3"
 import * as crypto from "webcrypto"
 
-const mh = (module.exports = Multihashing)
+const mh = Multihashing
+export default mh
 
 mh.Buffer = Buffer // for browser things
 

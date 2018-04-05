@@ -1,8 +1,6 @@
 // @flow
-"use strict"
-
 import * as sha3 from "js-sha3"
-import type { Hash, HashTable } from "./types"
+import type { Hash, HashTable, HashUpdate } from "./types"
 
 const functions = [
   [0x14, sha3.sha3_512],
@@ -34,6 +32,10 @@ class ShaHash implements Hash {
     this.input = null
   }
 
+  static new(hashFunc, arg?: number): HashUpdate {
+    return new ShaHash(hashFunc, arg)
+  }
+
   update(buf: Buffer): Hash {
     this.input = buf
     return this
@@ -55,9 +57,9 @@ export const addFuncs = (table: HashTable) => {
     const fn = info[1]
 
     if (info.length === 3) {
-      table[code] = () => new ShaHash(fn, info[2])
+      table[code] = () => ShaHash.new(fn, info[2])
     } else {
-      table[code] = () => new ShaHash(fn)
+      table[code] = () => ShaHash.new(fn)
     }
   }
 }
