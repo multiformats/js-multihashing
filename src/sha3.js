@@ -1,6 +1,6 @@
 // @flow
-import * as sha3 from "js-sha3"
-import type { Hash, HashTable, HashUpdate } from "./types"
+import * as sha3 from 'js-sha3'
+import type { Hash, HashTable, HashUpdate } from './types'
 
 const functions = [
   [0x14, sha3.sha3_512],
@@ -24,7 +24,7 @@ class ShaHash implements Hash {
   input: Buffer | null
   arg: number
 
-  constructor(hashFunc, arg?: number) {
+  constructor (hashFunc, arg?: number) {
     this.hf = hashFunc
     if (arg) {
       this.arg = arg
@@ -32,22 +32,22 @@ class ShaHash implements Hash {
     this.input = null
   }
 
-  static new(hashFunc, arg?: number): HashUpdate {
+  static new (hashFunc, arg?: number): HashUpdate {
     return new ShaHash(hashFunc, arg)
   }
 
-  update(buf: Buffer): Hash {
+  update (buf: Buffer): Hash {
     this.input = buf
     return this
   }
 
-  digest(): Sha3Hash {
+  digest (): Sha3Hash {
     if (!this.input) {
-      throw Error("Missing an input to hash")
+      throw Error('Missing an input to hash')
     }
     const input = this.input
     const arg = this.arg
-    return Buffer.from(this.hf(input, arg), "hex")
+    return Buffer.from(this.hf(input, arg), 'hex')
   }
 }
 

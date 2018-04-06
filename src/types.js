@@ -1,5 +1,5 @@
 // @flow
-import type { Code } from "multihashes/lib/constants"
+import type { Code } from 'multihashes/lib/constants'
 
 // We break up the Hash Class into Hash and HashUpdate
 // this is a really nice use of types to avoid the user
@@ -9,13 +9,15 @@ import type { Code } from "multihashes/lib/constants"
 // the digest function exposed is available.
 // This will only work for a code also using flow.
 
-export interface Hash extends HashUpdate {
-  digest(): Buffer;
-}
-
+/* eslint-disable no-use-before-define */
 export interface HashUpdate {
   update(buf: Buffer): Hash;
 }
+
+export interface Hash extends HashUpdate {
+  digest(): Buffer;
+}
+/* eslint-enable no-use-before-define */
 
 export type HashBuilder = () => HashUpdate
 export type HashTable = { [Code]: HashBuilder }

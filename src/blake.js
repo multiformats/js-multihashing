@@ -1,7 +1,7 @@
 // @flow
-import * as blake from "blakejs"
-import type { Hash, HashUpdate, HashTable, HashBuilder } from "./types"
-import type { Code } from "multihashes/lib/constants"
+import * as blake from 'blakejs'
+import type { Hash, HashUpdate, HashTable, HashBuilder } from './types'
+import type { Code } from 'multihashes/lib/constants'
 
 const minB: Code = 0xb201
 const minS: Code = 0xb241
@@ -36,28 +36,28 @@ class B2Hash implements Hash {
   ctx: BlakeCtx | null
   hf: BlakeHasher
 
-  constructor(size, hashFunc) {
+  constructor (size, hashFunc) {
     this.hf = hashFunc
     this.ctx = this.hf.init(size, null)
   }
 
-  static new(size, hashFunc): HashUpdate {
+  static new (size, hashFunc): HashUpdate {
     return new B2Hash(size, hashFunc)
   }
 
-  update(buf: Buffer): Hash {
+  update (buf: Buffer): Hash {
     if (this.ctx === null) {
-      throw new Error("blake2 context is null. (already called digest?)")
+      throw new Error('blake2 context is null. (already called digest?)')
     }
     this.hf.update(this.ctx, buf)
     return this
   }
 
-  digest(): Blake2Hash {
+  digest (): Blake2Hash {
     const ctx = this.ctx
     this.ctx = null
     if (ctx === null) {
-      throw Error("blake2 context is null. (already called digest?)")
+      throw Error('blake2 context is null. (already called digest?)')
     }
     return Buffer.from(this.hf.digest(ctx))
   }
