@@ -5,9 +5,10 @@
   "leadMaintainer": "Hugo Dias <mail@hugodias.me>",
   "main": "src/index.js",
   "scripts": {
-    "lint": "aegir lint",
-    "build": "aegir build",
-    "test": "aegir test -t node -t browser -t webworker",
+    "lint": "npm run type-check && aegir lint",
+    "type-check": "flow check",
+    "build": "npm run build:node && BABEL_ENV=umd aegir build",
+    "test": "npm run build:node && aegir test -t node -t browser -t webworker",
     "test:node": "aegir test -t node",
     "test:browser": "aegir test -t browser",
     "test:webworker": "aegir test -t webworker",
@@ -15,12 +16,21 @@
     "release-minor": "aegir release --type minor -t node -t browser",
     "release-major": "aegir release --type major -t node -t browser",
     "coverage": "aegir coverage",
-    "coverage-publish": "aegir coverage --provider coveralls"
+    "coverage-publish": "aegir coverage --provider coveralls",
+    "build:types": "flow-copy-source --verbose src lib",
+    "build:lib": "babel --out-dir lib src",
+    "build:node": "npm run build:types && npm run build:lib",
+    "start": "flow-copy-source --watch --verbose src lib & babel --watch --out-dir lib src"
   },
   "pre-commit": [
     "lint",
     "test"
   ],
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/multiformats/js-multihashing.git"
@@ -34,16 +44,25 @@
     "url": "https://github.com/multiformats/js-multihashing/issues"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "blakejs": "^1.1.0",
     "js-sha3": "^0.7.0",
     "multihashes": "~0.4.12",
     "webcrypto": "~0.1.1"
   },
   "devDependencies": {
-    "aegir": "^12.3.0",
+    "aegir": "git+https://github.com/ipfs/aegir.git#flow",
+    "babel-preset-flow-node": "^2.0.1",
     "chai": "^4.1.2",
     "dirty-chai": "^2.0.1",
-    "pre-commit": "^1.2.2"
+    "flow-bin": "^0.69.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.2",
+    "pre-commit": "^1.2.2",
+    "rollup.config.flow": "^1.0.0",
+    "source-map-support": "^0.5.4"
   },
   "homepage": "https://github.com/multiformats/js-multihashing",
   "contributors": [
