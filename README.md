@@ -12,6 +12,11 @@ js-multihashing
 
 > Use all the functions in [multihash](https://github.com/multiformats/multihash).
 
+## Lead Maintainer
+
+[Hugo Dias](https://github.com/hugomrdias)
+
+
 #### Wait, why, how is this different from Node `crypto`?
 
 This module just makes working with multihashes a bit nicer.
@@ -155,10 +160,6 @@ h.digest()
 ### `functions`
 
 An object mapping hexcodes to their hash functions.
-
-## Maintainers
-
-Captain: [@diasdavid](https://github.com/diasdavid).
 
 ## Contribute
 
