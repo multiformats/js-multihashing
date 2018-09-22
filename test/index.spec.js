@@ -9,7 +9,7 @@ const multihashing = require('../src')
 
 const tests = {
   sha1: [
-    ['beep boop', '11147c8357577f51d4f0a8d393aa1aaafb28863d9421']
+    ['beep boop', '11147c8357577f51d4f0a8d393ba1aaafb28863d9421']
   ],
   'sha2-256': [
     ['beep boop', '122090ea688e275d580567325032492b597bc77221c62493e76330b85ddda191ef7c']
