@@ -3,7 +3,7 @@
 const multihash = require('multihashes')
 const blake = require('./blake')
 const sha3 = require('./sha3')
-const crypto = require('webcrypto')
+const crypto = require('crypto')
 
 const mh = module.exports = Multihashing
 
