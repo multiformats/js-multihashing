@@ -78,7 +78,7 @@ describe('multihashing', () => {
         const output = Buffer.from(test[1], 'hex')
         const slices = test[0].split('').map(Buffer.from)
         const h = multihashing.createHash(algo)
-        slices.forEach(h.update.bind(h))
+        slices.forEach(h.update)
         expect(multihashing.verify(h.digest(), input)).to.be.eql(true)
       }
     })
