@@ -17,10 +17,6 @@
     "coverage": "aegir coverage",
     "coverage-publish": "aegir coverage --provider coveralls"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/multiformats/js-multihashing.git"
@@ -28,22 +24,20 @@
   "keywords": [
     "multihash"
   ],
-  "author": "Juan Benet <juan@benet.ai> (http://juan.benet.ai/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/multiformats/js-multihashing/issues"
   },
   "dependencies": {
     "blakejs": "^1.1.0",
-    "js-sha3": "^0.7.0",
-    "multihashes": "~0.4.12",
+    "js-sha3": "~0.8.0",
+    "multihashes": "~0.4.14",
     "webcrypto": "~0.1.1"
   },
   "devDependencies": {
-    "aegir": "^12.3.0",
-    "chai": "^4.1.2",
-    "dirty-chai": "^2.0.1",
-    "pre-commit": "^1.2.2"
+    "aegir": "^17.0.1",
+    "chai": "^4.2.0",
+    "dirty-chai": "^2.0.1"
   },
   "homepage": "https://github.com/multiformats/js-multihashing",
   "contributors": [
