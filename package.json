@@ -1,6 +1,6 @@
 {
   "name": "multihashing",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "multiple hash functions",
   "leadMaintainer": "Hugo Dias <mail@hugodias.me>",
   "main": "src/index.js",
@@ -45,9 +45,11 @@
     "David Dias <mail@daviddias.me>",
     "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
     "Harlan T Wood <harlantwood@users.noreply.github.com>",
+    "Henrique Dias <hacdias@gmail.com>",
+    "Hugo Dias <hugomrdias@gmail.com>",
     "Juan Benet <juan@benet.ai>",
     "Richard Littauer <richard.littauer@gmail.com>",
-    "Henrique Dias <hacdias@gmail.com>",
+    "Victor Bjelkholm <victorbjelkholm@gmail.com>",
     "npm-to-cdn-bot (by Forbes Lindesay) <npmcdn-to-unpkg-bot@users.noreply.github.com>"
   ]
 }
