@@ -52,5 +52,5 @@ function addFuncs (table) {
 }
 
 module.exports = {
-  addFuncs: addFuncs
+  addFuncs
 }
