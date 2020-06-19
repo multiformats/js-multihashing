@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-  bundlesize: { maxSize: '460kB' },
+  bundlesize: { maxSize: '193kB' },
   webpack: {
     node: {
       Buffer: true,
