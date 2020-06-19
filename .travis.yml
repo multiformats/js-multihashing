@@ -1,32 +1,42 @@
-# Warning: This file is automatically synced from https://github.com/ipfs/ci-sync so if you want to change it, please change it there and ask someone to sync all repositories.
-sudo: false
 language: node_js
 
-matrix:
-  include:
-  - node_js: 6
-    env: CXX=g++-4.8
-  - node_js: 8
-    env: CXX=g++-4.8
-    #  - node_js: stable
-    #    env: CXX=g++-4.8
+services:
+  - xvfb
+
+branches:
+  only:
+  - master
+  - /^release\/.*$/
+
+node_js:
+  - 'lts/*'
+  - 'node'
+
+os:
+  - linux
+  - osx
+  - windows
+
+env:
+  # This stops Windows builds from hanging
+  # https://travis-ci.community/t/timeout-after-build-finished-and-succeeded/1336
+  - YARN_GPG=no
+
+addons:
+  apt:
+    packages:
+      # Fixes error while loading shared libraries: libgconf-2.so.4: cannot open shared object file: No such file or directory
+      # https://github.com/electron/electron/issues/1518
+      - libgconf-2-4
+      # Ensure chrome is the latest version
+      # https://stackoverflow.com/questions/57903415/travis-ci-chrome-62-instead-of-77
+      - dpkg
+  chrome: stable
 
 script:
   - npm run lint
   - npm run test
   - npm run coverage
 
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
 after_success:
   - npm run coverage-publish
-
-addons:
-  firefox: 'latest'
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
