@@ -36,7 +36,3 @@ addons:
 script:
   - npm run lint
   - npm run test
-  - npm run coverage
-
-after_success:
-  - npm run coverage-publish
