@@ -1,3 +1,6 @@
+⛔️ DEPRECATED: This module has been superseded by [multiformats](https://github.com/multiformats/js-multiformats) <!-- omit in toc -->
+======
+
 js-multihashing
 ===============
 
@@ -27,25 +30,28 @@ For now, it just uses `crypto`, but will use `sha3` and `blake2`, etc.
 
 ## Table of Contents
 
-- [Install](#install)
-  - [In Node.js through npm](#in-nodejs-through-npm)
-  - [Use in a browser with browserify, webpack or any other bundler](#use-in-a-browser-with-browserify-webpack-or-any-other-bundler)
-  - [Use in a browser Using a script tag](#use-in-a-browser-using-a-script-tag)
-    - [Gotchas](#gotchas)
-- [Usage](#usage)
-- [Examples](#examples)
-  - [Multihash output](#multihash-output)
-  - [Raw digest output](#raw-digest-output)
-  - [Verify a multihash](#verify-a-multihash)
-- [API](#api)
-  - [`multihashing(buf, func, length)`](#multihashingbuf-func-length)
-  - [`digest(buf, func, length)`](#digestbuf-func-length)
-  - [`createHash(func, length)`](#createhashfunc-length)
-  - [`verify(input, buf)`](#verifyhash-buf)
-  - [`functions`](#functions)
-- [Maintainers](#maintainers)
-- [Contribute](#contribute)
-- [License](#license)
+- [js-multihashing](#js-multihashing)
+  - [Lead Maintainer](#lead-maintainer)
+      - [Wait, why, how is this different from Node `crypto`?](#wait-why-how-is-this-different-from-node-crypto)
+  - [Table of Contents](#table-of-contents)
+  - [Install](#install)
+    - [In Node.js through npm](#in-nodejs-through-npm)
+    - [Use in a browser with browserify, webpack or any other bundler](#use-in-a-browser-with-browserify-webpack-or-any-other-bundler)
+    - [Use in a browser Using a script tag](#use-in-a-browser-using-a-script-tag)
+      - [Gotchas](#gotchas)
+  - [Usage](#usage)
+  - [Examples](#examples)
+    - [Multihash output](#multihash-output)
+    - [Raw digest output](#raw-digest-output)
+    - [Verify a multihash](#verify-a-multihash)
+  - [API](#api)
+    - [`multihashing(buf, func, length)`](#multihashingbuf-func-length)
+    - [`digest(buf, func, length)`](#digestbuf-func-length)
+    - [`createHash(func, length)`](#createhashfunc-length)
+    - [`verify(hash, buf)`](#verifyhash-buf)
+    - [`functions`](#functions)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## Install
 
